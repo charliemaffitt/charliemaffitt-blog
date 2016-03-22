@@ -1,6 +1,8 @@
 <%- if @post %>
   <h1><%= @post.title %></h2>
-  <p><%= @post.published_at %></p>
+  <p><%= @post.published_at.strftime('%B %d, %Y') %></p>
 
-    <%= @post.formatted_body %>
+    <%= @post.formatted_body.html_safe %>
 <%- end %>
+
+<%= link_to 'All posts', posts_path %>

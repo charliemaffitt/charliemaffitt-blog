@@ -1,0 +1,14 @@
+= form_for [:admin, @post] do |f|
+  = show_form_errors @post
+
+  fieldset.form-group
+    = f.label :title
+    = f.text_field :title, class: 'form-control'
+    
+  fieldset.form-group
+    = f.label :raw_body
+    = f.text_field :raw_body, class: 'form-control'
+
+  fieldset.form-group
+    = f.submit type: 'submit', class: 'btn btn-primary'
+    = link_to t('buttons.cancel'), admin_posts_path, class: 'btn btn-default btn-cancel'

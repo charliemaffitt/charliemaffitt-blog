@@ -1,0 +1,28 @@
+= link_to "Add Post", new_admin_post_path, class: 'btn btn-primary pull-right admin_button'
+
+h2
+  = "Blog Posts"
+
+-if @posts
+  table.table.table-striped
+    tr
+      th
+        = "Title"
+      th
+        = "Created"
+      th
+        = "Published"
+      th
+    - @posts.each do |post|
+      tr
+        td
+          = post.title
+        td
+          = post.created_at
+        td
+          = post.published_at
+        td
+          = link_to 'edit', edit_admin_post_path(post), class: 'btn btn-default btn-xs', role: 'button'
+          = link_to 'delete', admin_post_path(post), class: 'btn btn-default btn-delete btn-xs', role: 'button', method: :delete, data: {confirm: 'Are you sure?'}
+
+  = paginate @posts
