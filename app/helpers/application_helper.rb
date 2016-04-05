@@ -9,4 +9,14 @@ module ApplicationHelper
       end
     end
   end
+
+  def bootstrap_class_for_alert(name)
+    css_class = ["alert", "alert-dismissible"]
+    if ["success", "notice"].include? name
+      css_class << "alert-success"
+    elsif ["error", "alert"].include? name
+      css_class << "alert-danger"
+    end
+    css_class.join(" ")
+  end
 end

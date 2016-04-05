@@ -1,0 +1,5 @@
+- if flash.present?
+  - flash.each do |name, msg|
+    .l-section-alert
+      div class="#{bootstrap_class_for_alert(name)} flash-alert" role='alert'
+        .alert-body = msg

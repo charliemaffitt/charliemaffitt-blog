@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title Charlie Maffitt Blog
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    = stylesheet_link_tag    "application", media: 'all'
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+
+  body
+    .container-fluid
+      .row
+        .col-sm-1
+        .col-sm-10
+          .banner_header
+            .row
+              h1 My blog about stuff
+            .row
+              = render partial: 'shared/flash_messages'
+            .row
+              .col-sm-2.navigation_column
+                = render 'shared/navigation'
+              .col-sm-10
+                = yield
+        .col-sm-1
