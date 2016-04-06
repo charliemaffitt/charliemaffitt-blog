@@ -7,7 +7,7 @@
     
   fieldset.form-group
     = f.label :raw_body
-    = f.text_field :raw_body, class: 'form-control'
+    = f.text_area :raw_body, rows: 20, class: 'form-control'
 
   fieldset.form-group
     = f.submit type: 'submit', class: 'btn btn-primary'
