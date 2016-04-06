@@ -12,14 +12,13 @@ html
       .row
         .col-sm-1
         .col-sm-10
-          .banner_header
-            .row
-              h1 Arcane Island
+            .row.banner_header
+              h1 Arcane Island 23271    
             .row
               = render partial: 'shared/flash_messages'
             .row
               .col-sm-2.navigation_column
                 = render 'shared/navigation'
-              .col-sm-10
+              .col-sm-10.content
                 = yield
         .col-sm-1

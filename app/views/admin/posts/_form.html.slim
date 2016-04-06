@@ -10,5 +10,9 @@
     = f.text_area :raw_body, rows: 20, class: 'form-control'
 
   fieldset.form-group
+    = f.check_box :published
+    = f.label :published
+
+  fieldset.form-group
     = f.submit type: 'submit', class: 'btn btn-primary'
     = link_to t('buttons.cancel'), admin_posts_path, class: 'btn btn-default btn-cancel'

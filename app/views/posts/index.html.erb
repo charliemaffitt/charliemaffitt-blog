@@ -1,9 +1,13 @@
-<h1>Blog</h1>
+<h2>Recent Posts</h2>
 
 <%- if @posts %>
   <ul>
   <%- @posts.each do |post| %>
-    <li><%= link_to post.title, post_path(post) %></li>
+    <div class="list-group">
+      <h5 class="list-group-item-heading"><%= link_to post.title, post_path(post) %></h5>
+      <p class="list-group-item-text"><%= post.published_at.strftime("%B %d, %Y") %></p>
+    
+    </div>
   <%- end %>
   </ul>
 <%- end %>

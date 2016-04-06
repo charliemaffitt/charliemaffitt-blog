@@ -20,7 +20,6 @@ class Admin::PostsController < ApplicationController
     end
   end
 
-  
   def edit
     @post = Post.find(params[:id])
   end
@@ -50,6 +49,6 @@ class Admin::PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :raw_body)
+    params.require(:post).permit(:published, :title, :raw_body)
   end
 end
