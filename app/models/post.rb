@@ -1,6 +1,8 @@
 class Post < ActiveRecord::Base
   before_save :format_text
 
+  scope :published, -> { where(published: 'true') }
+
   private
 
   def format_text
