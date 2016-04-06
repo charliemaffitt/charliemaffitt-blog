@@ -4,7 +4,7 @@
   <ul>
   <%- @posts.each do |post| %>
     <div class="list-group">
-      <h5 class="list-group-item-heading"><%= link_to post.title, post_path(post) %></h5>
+      <h3 class="list-group-item-heading"><%= link_to post.title, post_path(post) %></h3>
       <p class="list-group-item-text"><%= post.published_at.strftime("%B %d, %Y") %></p>
     
     </div>
